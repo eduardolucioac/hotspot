@@ -1,0 +1,3 @@
+#!/bin/bash
+
+konsole --hide-tabbar --hide-menubar -p "TerminalColumns=40;TerminalRows=2" -e "sudo -b create_ap-gui" 2> /dev/null 1> /dev/null &
