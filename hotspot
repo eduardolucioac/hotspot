@@ -1,3 +1,7 @@
 #!/bin/bash
 
-konsole --hide-tabbar --hide-menubar -p "TerminalColumns=40;TerminalRows=2" -e "sudo -b create_ap-gui" 2> /dev/null 1> /dev/null &
+# NOTE: For some reason "2> /dev/null 1> /dev/null" prevents "create_ap-gui"'s 
+# startup failure. What happens is that you enter the password and the 
+# "create_ap-gui" does not start! By Questor
+
+konsole --hide-tabbar --hide-menubar -p "TerminalColums=40;TerminalRows=2" -e bash -c "sudo -b create_ap-gui 2> /dev/null 1> /dev/null"
